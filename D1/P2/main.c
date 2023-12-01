@@ -3,6 +3,7 @@
 #include "stdbool.h"
 #include "string.h"
 
+//Lets count the amount of letters in words! Fuck strlen()
 /*
 3
 ------
@@ -31,6 +32,7 @@ int main() {
 
 	inputFile = fopen("input.txt", "r");
 
+	//Once again, requires two terminating '\n's
 	while(!feof(inputFile)) {
 		fgets(currentInput, 127, inputFile);
 
@@ -39,14 +41,17 @@ int main() {
 		char currentNum = 0;
 
 		for(char pos = 0; pos < 127; pos++) {
-
+			//Don't remember why I added the '\n', but here we are
 			if(currentInput[pos] == 0 || currentInput[pos] == '\n') {
 				break;
 			}
 
-			switch(currentInput[pos]) {
+			//There are way better ways to organize this, but this one made sense
+			switch(currentInput[pos]) {//If the current char is a letter that might indicate a number:
 				case 'o':
-					if(strncmp(currentInput+pos, "one", 3) == 0) {
+					//Slightly abusing the n part of strncmp
+					if(strncmp(currentInput+pos, "one", 3) == 0) { // == 0 because ! might have been confusing to read
+						//This block could probably be a function or compile time substitution
 						if(!firstNumFound) {
 							firstNum = 1;
 							firstNumFound = true;
@@ -167,6 +172,7 @@ int main() {
 
 			}
 
+			//Same as last problem from here on
 			if('0' <= currentInput[pos] && currentInput[pos] <= '9') {
 
 				if(!firstNumFound) {
