@@ -8,6 +8,7 @@ A small challenge between a few friends and I. Basic Rules are as follows:
 ---
 
 The directory structure is:
+```
 +-- D1
 |   +-P1
 |   +-P2
@@ -17,6 +18,7 @@ The directory structure is:
 +-- DXX
 	+-- P1
 	+-- P2
+```
 
 Where DXX is the day, P1 is the initial problem, and P2 is the gold star for the day.
 Input is stored with the specific problem, subject to change.
