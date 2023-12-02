@@ -13,11 +13,11 @@ The directory structure is:
 |   +-P1
 |   +-P2
 +-- D2
-|	+-- P1
-|	+-- P2
+|   +-- P1
+|   +-- P2
 +-- DXX
-	+-- P1
-	+-- P2
+    +-- P1
+    +-- P2
 ```
 
 Where DXX is the day, P1 is the initial problem, and P2 is the gold star for the day.
